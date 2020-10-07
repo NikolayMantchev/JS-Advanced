@@ -1,0 +1,36 @@
+function create(words) {
+    const parent = document.getElementById("content");
+    const all = words.forEach((word) => {
+        const div = document.createElement("div");
+        const p = document.createElement("p");
+        p.innerHTML = word;
+        p.style.display = "none";
+
+        div.addEventListener("click", (e) => {
+            p.style.display = "block";
+        });
+        div.appendChild(p);
+        parent.appendChild(div);
+    });
+}
+// 100/100
+
+// function create(words) {
+//    let content = document.querySelector("#content");
+//    for (let i = 0; i < words.length; i++) {
+//      let p = document.createElement("p");
+//      p.innerHTML = words[i];
+//      p.style.display = "none";
+//      let div = document.createElement("div");
+//      div.appendChild(p);
+//      content.appendChild(div);
+//    }
+//    let div = document.querySelectorAll("div");
+//    Array.from(div).forEach((d) =>
+//      d.addEventListener("click", function (e) {
+//        if (e.target !== content) {
+//          e.target.children[0].style.display = "block";
+//        }
+//      })
+//    );
+//  }
