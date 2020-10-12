@@ -1,7 +1,9 @@
-let solution = {
-    add: (vec1, vec2) => [vec1[0] + vec2[0], vec1[1] + vec2[1]],
-    multiply: (vec, scalar) => [vec[0] * scalar, vec[1] * scalar],
-    length: (vec) => Math.sqrt(vec[0] * vec[0] + vec[1] * vec[1]),
-    dot: (vec1, vec2) => vec1[0] * vec2[0] + vec2[1] * vec1[1],
-    cross: (vec1, vec2) => vec1[0] * vec2[1] - vec2[0] * vec1[1],
+solution = {
+    add: ([x1, y1], [x2, y2]) => [x1 + x2, y1 + y2],
+    multiply: (vec1, multiplier) => vec1.map((x) => x * multiplier),
+    length: ([x, y]) => Math.sqrt(x ** 2 + y ** 2),
+    dot: ([x1, y1], [x2, y2]) => x1 * y1 + x2 * y2,
+    cross: ([x1, y1], [x2, y2]) => x1 * y2 - y1 * x2,
 };
+console.log(solution.cross([3, 7], [1, 0]));
+// 80/100
