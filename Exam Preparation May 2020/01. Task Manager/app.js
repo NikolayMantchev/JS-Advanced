@@ -50,7 +50,7 @@ function solve() {
             });
             // добавям елемента в ДОМ дървото
             openDiv.appendChild(task);
-
+            // изчиствам входа
             inputTasc.value = "";
             inputDesc.value = "";
             inputDate.value = "";

@@ -3,7 +3,6 @@ function solve() {
     const inputElements = Array.from(
         document.querySelectorAll("#container input")
     );
-
     // css selectors id -> ('#id')
     // css selectors id + element -> ('#id input')
     //  item(1)
@@ -24,7 +23,7 @@ function solve() {
         if (!Number(ageEL.value)) {
             return;
         }
-        // create listItem/p/span/button
+        // create Elements   -  listItem/p/span/button
         const listItem = document.createElement("li");
         const pItem = document.createElement("p");
         pItem.innerHTML = `<strong>${nameEl.value}</strong> is a <strong>${ageEL.value}</strong> year old <strong>${kindEl.value}</strong>`;
@@ -47,7 +46,7 @@ function solve() {
     }
 
     function third(e) {
-        // create new div/input: placeholder/ span/button
+        // create elements div/input: placeholder/ span/button
         const parent = e.currentTarget.parentElement;
         e.currentTarget.remove();
 
@@ -58,6 +57,7 @@ function solve() {
         span.innerHTML = `Owner: ${inputOwner.value}`;
         const takeItBtn = document.createElement("button");
         takeItBtn.textContent = "Yes! I take it!";
+
         div.appendChild(inputOwner);
         div.appendChild(takeItBtn);
         parent.appendChild(div);
@@ -88,4 +88,3 @@ function solve() {
         });
     }
 }
-// 100/100
