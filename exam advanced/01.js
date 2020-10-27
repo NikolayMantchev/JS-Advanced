@@ -1,8 +1,6 @@
 function solve() {
     // Take elements
-    const inputElements = Array.from(
-        document.querySelectorAll("#container input")
-    );
+    const inputElements = Array.from(document.querySelectorAll("#name input"));
     // css selectors id -> ('#id')
     // css selectors id + element -> ('#id input')
     //  item(1)
